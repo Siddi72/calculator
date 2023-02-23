@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    body{
+        background-image: url(./pexels-mali-maeder-109391.jpg);
+        background-size: 100%;
+        background-position: 0px -250px;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    #container{
+        position: relative;
+        width: 40%;
+        height: 80%;
+        background-color: rgba(0, 0, 0, 0.577);
+        border-radius: 2%;
+        box-shadow: 5px 5px 5px black;
+    }
+    #display{
+        width: 75%;
+        height: 35px;
+        position: absolute;
+        top: 5%;
+        left: 9%;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+        padding: 5px;
+        outline: none;
+        border: 2px 2px 5px black;
+    }
+    .a{
+        top: 13vh;
+        left: 5vw;
+        margin: 8px;
+        margin-top: 35px;
+        position: relative;
+        width: 15%;
+        height: 6vh;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+        border: 2px solid white;
+    }
+    #clear{
+        position: absolute;
+        bottom: 30px;
+        width: 34%;
+        height: 6vh;
+        font-size: 24px;
+        left: 5vw;
+        background-color: rgba(94, 92, 127, 0.966);
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+    }
+    #equ{
+        position: absolute;
+        bottom: 30px;
+        width: 34%;
+        height: 6vh;
+        font-size: 20px;
+        left: 20vw;
+        background-color: rgb(99, 96, 140);
+        color: white;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px black;
+    }
+</style>
+<body>
+    <div id="container">
+    <form name="cform">
+        <input name="Ans" id="display">
+        <br>
+        <input class="a" onmousedown="clksound()" type="button" value="1" onclick="cform.Ans.value +='1'">
+        <input class="a"onmousedown="clksound()" type="button" value="2" onclick="cform.Ans.value +='2'">
+        <input class="a"onmousedown="clksound()" type="button" value="3" onclick="cform.Ans.value +='3'">
+        <input class="a"onmousedown="clksound()" type="button" value="+" onclick="cform.Ans.value +='+'">
+        <br>
+        <input onmousedown="clksound()" class="a" type="button" value="4" onclick="cform.Ans.value +='4'">
+        <input onmousedown="clksound()"class="a" type="button" value="5" onclick="cform.Ans.value +='5'">
+        <input onmousedown="clksound()"class="a" type="button" value="6" onclick="cform.Ans.value +='6'">
+        <input onmousedown="clksound()"class="a" type="button" value="-" onclick="cform.Ans.value +='-'">
+        <br>
+        <input onmousedown="clksound()" class="a" type="button" value="7" onclick="cform.Ans.value +='7'">
+        <input onmousedown="clksound()"  class="a" type="button" value="8" onclick="cform.Ans.value +='8'">
+        <input onmousedown="clksound()"  class="a" type="button" value="9" onclick="cform.Ans.value +='9'">
+        <input onmousedown="clksound()" class="a" type="button" value="*" onclick="cform.Ans.value +='*'">
+        <br>
+        <input onmousedown="clksound()"  class="a" type="button" value="%" onclick="cform.Ans.value +='%'">
+        <input onmousedown="clksound()" class="a" type="button" value="0" onclick="cform.Ans.value +='0'">
+        <input onmousedown="clksound()" class="a" type="button" value="." onclick="cform.Ans.value +='.'">
+        <input onmousedown="clksound()" class="a" type="button" value="/" onclick="cform.Ans.value +='/'">
+        <br>
+        <input onmousedown="clksound()" id="equ" type="button" value="=" onclick="cform.Ans.value =eval(cform.Ans.value)">
+        <input onmousedown="clksound()" id="clear" type="button" value="c" onclick="cform.Ans.value =' '">
+    </form>
+    </div>
+    <script>
+        function clksound()
+        {
+            var clksound=new Audio()
+            clksound.src="./button sound.mp3"
+            clksound.play()
+        }
+    </script>
+</body>
+</html>
